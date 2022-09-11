@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="VideoSegmentedCollectionViewCell" customModule="Practice" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="471" height="329"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="471" height="329"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="qNn-zN-HQe" userLabel="StackView">
+                        <rect key="frame" x="0.0" y="0.0" width="471" height="329"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="njO-6A-3pa" userLabel="PaddingView">
+                                <rect key="frame" x="0.0" y="0.0" width="471" height="329"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="8mv-o5-kOJ" userLabel="SegmentedControl">
+                                        <rect key="frame" x="15" y="15" width="441" height="300"/>
+                                        <segments>
+                                            <segment title="First"/>
+                                            <segment title="Second"/>
+                                        </segments>
+                                    </segmentedControl>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="8mv-o5-kOJ" secondAttribute="trailing" constant="15" id="Ahr-hn-7Zt"/>
+                                    <constraint firstItem="8mv-o5-kOJ" firstAttribute="leading" secondItem="njO-6A-3pa" secondAttribute="leading" constant="15" id="bPb-ND-N6i"/>
+                                    <constraint firstAttribute="bottom" secondItem="8mv-o5-kOJ" secondAttribute="bottom" constant="15" id="xQm-sJ-cFa"/>
+                                    <constraint firstItem="8mv-o5-kOJ" firstAttribute="top" secondItem="njO-6A-3pa" secondAttribute="top" constant="15" id="yYt-t7-cpy"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                    </stackView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="top" secondItem="qNn-zN-HQe" secondAttribute="top" id="NNY-eJ-ySX"/>
+                <constraint firstItem="qNn-zN-HQe" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="OJR-dU-ZUB"/>
+                <constraint firstItem="qNn-zN-HQe" firstAttribute="trailing" secondItem="gTV-IL-0wX" secondAttribute="trailing" id="RVO-Bl-Zv3"/>
+                <constraint firstAttribute="bottom" secondItem="qNn-zN-HQe" secondAttribute="bottom" id="uie-CP-b6x"/>
+            </constraints>
+            <size key="customSize" width="471" height="329"/>
+            <connections>
+                <outlet property="segmentedControl" destination="8mv-o5-kOJ" id="uUE-jS-U32"/>
+                <outlet property="stackView" destination="qNn-zN-HQe" id="wqb-wA-Sod"/>
+            </connections>
+            <point key="canvasLocation" x="442.75362318840581" y="185.82589285714286"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

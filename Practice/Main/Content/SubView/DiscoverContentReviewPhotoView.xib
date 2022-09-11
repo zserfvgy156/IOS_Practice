@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DiscoverContentReviewPhotoView" customModule="Practice" customModuleProvider="target">
+            <connections>
+                <outlet property="navigationBar" destination="UOc-iq-OVe" id="LlL-3U-lVq"/>
+                <outlet property="scrollView" destination="NVv-iq-PZM" id="vdS-fU-vh1"/>
+                <outlet property="stackView" destination="paO-iS-kts" id="AEe-2f-qw4"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" maximumZoomScale="3" translatesAutoresizingMaskIntoConstraints="NO" id="NVv-iq-PZM">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="100" placeholderIntrinsicHeight="100" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="paO-iS-kts">
+                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="paO-iS-kts" firstAttribute="trailing" secondItem="NVv-iq-PZM" secondAttribute="trailing" id="acM-jU-vWY"/>
+                        <constraint firstItem="paO-iS-kts" firstAttribute="leading" secondItem="NVv-iq-PZM" secondAttribute="leading" id="sKU-nP-yFQ"/>
+                        <constraint firstItem="paO-iS-kts" firstAttribute="top" secondItem="NVv-iq-PZM" secondAttribute="top" id="vTO-vE-pNg"/>
+                        <constraint firstItem="paO-iS-kts" firstAttribute="bottom" secondItem="NVv-iq-PZM" secondAttribute="bottom" id="ye2-ar-6BB"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="J7D-nk-0jz"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="xuR-ki-Uao"/>
+                </scrollView>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UOc-iq-OVe">
+                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <textAttributes key="titleTextAttributes">
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </textAttributes>
+                    <items>
+                        <navigationItem title="Title" id="HYL-Af-bGX"/>
+                    </items>
+                </navigationBar>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="NVv-iq-PZM" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="52z-ov-gRV"/>
+                <constraint firstItem="NVv-iq-PZM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="J5Q-fz-xQj"/>
+                <constraint firstItem="UOc-iq-OVe" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="JUG-Qb-6Dw"/>
+                <constraint firstItem="NVv-iq-PZM" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="fDm-Xe-Urg"/>
+                <constraint firstItem="NVv-iq-PZM" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="pK2-6K-QPK"/>
+                <constraint firstItem="UOc-iq-OVe" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="rjo-fm-Daf"/>
+                <constraint firstItem="UOc-iq-OVe" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="yUK-pb-DSO"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="103"/>
+        </view>
+    </objects>
+</document>

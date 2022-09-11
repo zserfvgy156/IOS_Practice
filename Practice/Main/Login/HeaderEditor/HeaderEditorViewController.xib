@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeaderEditorViewController" customModule="Practice" customModuleProvider="target">
+            <connections>
+                <outlet property="contentImageView" destination="rgx-Gy-50X" id="zIU-Dg-PnE"/>
+                <outlet property="cropButton" destination="5xO-d4-gz4" id="7cF-Xh-gaB"/>
+                <outlet property="maskView" destination="1Eb-b1-6Ro" id="EEy-Xz-kbB"/>
+                <outlet property="outputImageView" destination="clP-gd-eZc" id="Itf-u1-gUO"/>
+                <outlet property="rotateButton" destination="sxe-FM-z5R" id="rwK-QP-eAK"/>
+                <outlet property="scrollView" destination="Gei-Ed-8Nj" id="DZw-Wa-Z5R"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="3" translatesAutoresizingMaskIntoConstraints="NO" id="Gei-Ed-8Nj">
+                    <rect key="frame" x="0.0" y="44" width="414" height="414"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="100" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="rgx-Gy-50X" userLabel="contentImageView">
+                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                        </imageView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="rgx-Gy-50X" secondAttribute="bottom" id="FDa-cb-Pdg"/>
+                        <constraint firstAttribute="trailing" secondItem="rgx-Gy-50X" secondAttribute="trailing" id="G55-Ev-GOV"/>
+                        <constraint firstItem="rgx-Gy-50X" firstAttribute="top" secondItem="Gei-Ed-8Nj" secondAttribute="top" id="NfU-fL-iju"/>
+                        <constraint firstItem="rgx-Gy-50X" firstAttribute="leading" secondItem="Gei-Ed-8Nj" secondAttribute="leading" id="t3P-Le-Sf0"/>
+                    </constraints>
+                </scrollView>
+                <view userInteractionEnabled="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="0.0" placeholderIntrinsicHeight="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="1Eb-b1-6Ro" userLabel="MaskView">
+                    <rect key="frame" x="0.0" y="44" width="414" height="414"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="7et-wK-NUh" userLabel="ButtonsStackView">
+                    <rect key="frame" x="115" y="488" width="184" height="31"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sxe-FM-z5R" userLabel="rotateButton">
+                            <rect key="frame" x="0.0" y="0.0" width="84.5" height="31"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="旋轉90度"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5xO-d4-gz4" userLabel="cropButton">
+                            <rect key="frame" x="99.5" y="0.0" width="84.5" height="31"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="輸出"/>
+                        </button>
+                    </subviews>
+                </stackView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="100" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="clP-gd-eZc" userLabel="ouputImageView">
+                    <rect key="frame" x="169.5" y="777" width="75" height="75"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="75" id="SUy-gM-EmL"/>
+                        <constraint firstAttribute="width" constant="75" id="kC6-ke-0r0"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="clP-gd-eZc" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="84g-fe-tMq"/>
+                <constraint firstItem="7et-wK-NUh" firstAttribute="top" secondItem="1Eb-b1-6Ro" secondAttribute="bottom" constant="30" id="99Y-ue-XIz"/>
+                <constraint firstItem="1Eb-b1-6Ro" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="width" id="AA5-nz-rfW" userLabel="MaskView.height = Safe Area.width"/>
+                <constraint firstItem="Gei-Ed-8Nj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="IDo-AM-BnM"/>
+                <constraint firstItem="1Eb-b1-6Ro" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="K3R-Qu-ppf"/>
+                <constraint firstItem="Gei-Ed-8Nj" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="width" id="NWs-Js-x2L" userLabel="Scroll View.height = width"/>
+                <constraint firstItem="7et-wK-NUh" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="TTX-Fz-3v7"/>
+                <constraint firstItem="1Eb-b1-6Ro" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="U5M-h3-XU1"/>
+                <constraint firstItem="clP-gd-eZc" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="-10" id="WKl-we-fE8"/>
+                <constraint firstItem="1Eb-b1-6Ro" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Yae-Yh-HWB"/>
+                <constraint firstItem="Gei-Ed-8Nj" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ohM-f5-fV6"/>
+                <constraint firstItem="Gei-Ed-8Nj" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="yhj-5b-kAq"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="144"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

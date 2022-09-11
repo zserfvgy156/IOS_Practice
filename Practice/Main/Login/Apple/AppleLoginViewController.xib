@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AppleLoginViewController" customModule="Practice" customModuleProvider="target">
+            <connections>
+                <outlet property="accountTextField" destination="sc1-af-uH6" id="Oqc-PC-AWN"/>
+                <outlet property="commitButton" destination="L90-L0-nFl" id="m0g-iX-fm0"/>
+                <outlet property="headerCircleImageView" destination="rQZ-zM-821" id="NcG-Ul-6Qi"/>
+                <outlet property="passwordTextField" destination="evl-af-nBm" id="78g-l3-Hub"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WMA-UV-PUA">
+                    <rect key="frame" x="0.0" y="74" width="414" height="758"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Discover/Cell/swift_logo" translatesAutoresizingMaskIntoConstraints="NO" id="rQZ-zM-821" userLabel="HeaderImageView" customClass="CircleImageView" customModule="Practice" customModuleProvider="target">
+                            <rect key="frame" x="169.5" y="0.0" width="75" height="75"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="75" id="X8J-GA-LoG"/>
+                                <constraint firstAttribute="width" constant="75" id="aWn-SG-dcy"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="roundness">
+                                    <real key="value" value="2"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" name="AccentColor"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </imageView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="9gf-To-7oa" userLabel="InputStackView">
+                            <rect key="frame" x="0.0" y="335" width="414" height="110"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sc1-af-uH6" userLabel="AccountTextField">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="45"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="45" id="2La-jI-AXq"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" textContentType="username"/>
+                                </textField>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="evl-af-nBm" userLabel="PaawordTextField">
+                                    <rect key="frame" x="0.0" y="65" width="414" height="45"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="45" id="Cyd-Yx-FwH"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                </textField>
+                            </subviews>
+                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L90-L0-nFl" userLabel="commitButton">
+                            <rect key="frame" x="50" y="727" width="314" height="31"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="commit" cornerStyle="fixed">
+                                <color key="baseForegroundColor" name="AccentColor"/>
+                            </buttonConfiguration>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="L90-L0-nFl" firstAttribute="leading" secondItem="WMA-UV-PUA" secondAttribute="leading" constant="50" id="ahP-4A-mGt"/>
+                        <constraint firstItem="9gf-To-7oa" firstAttribute="leading" secondItem="WMA-UV-PUA" secondAttribute="leading" id="iyb-c3-BfF"/>
+                        <constraint firstAttribute="trailing" secondItem="L90-L0-nFl" secondAttribute="trailing" constant="50" id="lmd-SA-XPJ"/>
+                        <constraint firstAttribute="trailing" secondItem="9gf-To-7oa" secondAttribute="trailing" id="pDB-4j-wM0"/>
+                        <constraint firstItem="9gf-To-7oa" firstAttribute="top" relation="greaterThanOrEqual" secondItem="rQZ-zM-821" secondAttribute="bottom" constant="15" id="pDt-TI-uW7"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemGray5Color"/>
+            <constraints>
+                <constraint firstItem="WMA-UV-PUA" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="-30" id="HAW-u7-766"/>
+                <constraint firstItem="WMA-UV-PUA" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="ec5-UO-gv7"/>
+                <constraint firstItem="WMA-UV-PUA" firstAttribute="top" relation="lessThanOrEqual" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="ph0-PZ-NTz"/>
+                <constraint firstItem="WMA-UV-PUA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ruH-ee-ZCh"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="145"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="rQZ-zM-821">
+            <size key="intrinsicContentSize" width="450" height="260"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="Discover/Cell/swift_logo" width="450" height="260"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

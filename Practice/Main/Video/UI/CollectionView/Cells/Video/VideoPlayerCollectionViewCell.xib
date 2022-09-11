@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="gTV-IL-0wX" customClass="VideoPlayerCollectionViewCell" customModule="Practice" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="687" height="686"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="687" height="686"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="He1-iJ-7M8" userLabel="CollapsedStackView">
+                        <rect key="frame" x="0.0" y="44" width="687" height="100"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vPE-bU-byU" userLabel="collapsedSubView">
+                                <rect key="frame" x="15" y="23.5" width="100" height="53"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="vPE-bU-byU" secondAttribute="height" multiplier="15:8" id="BVu-SU-f9h"/>
+                                    <constraint firstAttribute="width" constant="100" id="mAx-2O-NNf"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get started with custom product pages " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pWk-3Y-oPe" userLabel="VideoNameLabel">
+                                <rect key="frame" x="213" y="38.5" width="336" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6sG-Im-5x9" userLabel="PlayButton">
+                                <rect key="frame" x="647" y="37.5" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="6sG-Im-5x9" secondAttribute="height" multiplier="1:1" id="7bt-ne-YY7"/>
+                                    <constraint firstAttribute="width" constant="25" id="us3-mJ-jJf"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="play.fill" catalog="system"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="100" id="UKT-OO-jrJ"/>
+                        </constraints>
+                        <edgeInsets key="layoutMargins" top="0.0" left="15" bottom="0.0" right="15"/>
+                    </stackView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2bn-r0-RUJ" userLabel="SubView">
+                        <rect key="frame" x="0.0" y="44" width="687" height="458"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JFW-R4-1dV" userLabel="VideoPlayerView" customClass="VideoPlayerView" customModule="Practice" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="687" height="458"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JFW-R4-1dV" firstAttribute="top" secondItem="2bn-r0-RUJ" secondAttribute="top" id="6ag-hN-R4K"/>
+                            <constraint firstItem="JFW-R4-1dV" firstAttribute="trailing" secondItem="2bn-r0-RUJ" secondAttribute="trailing" id="P2P-hk-bga"/>
+                            <constraint firstItem="JFW-R4-1dV" firstAttribute="leading" secondItem="2bn-r0-RUJ" secondAttribute="leading" id="auI-cl-eEC"/>
+                            <constraint firstItem="JFW-R4-1dV" firstAttribute="bottom" secondItem="2bn-r0-RUJ" secondAttribute="bottom" id="u4P-C3-hsF"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="He1-iJ-7M8" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="2ic-IR-l7E"/>
+                <constraint firstItem="2bn-r0-RUJ" firstAttribute="top" secondItem="ZTg-uK-7eu" secondAttribute="top" id="4wV-Tw-OsG"/>
+                <constraint firstItem="He1-iJ-7M8" firstAttribute="top" secondItem="ZTg-uK-7eu" secondAttribute="top" id="QUo-Rh-Mox"/>
+                <constraint firstItem="2bn-r0-RUJ" firstAttribute="trailing" secondItem="ZTg-uK-7eu" secondAttribute="trailing" id="X32-Nd-BGN"/>
+                <constraint firstItem="He1-iJ-7M8" firstAttribute="trailing" secondItem="ZTg-uK-7eu" secondAttribute="trailing" id="bk1-Ty-NKg"/>
+                <constraint firstItem="2bn-r0-RUJ" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="cjN-Fy-KTK"/>
+                <constraint firstItem="2bn-r0-RUJ" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="2:3" id="tpF-h0-16s"/>
+            </constraints>
+            <size key="customSize" width="687" height="686"/>
+            <connections>
+                <outlet property="collapsedStackView" destination="He1-iJ-7M8" id="R6H-AM-Di8"/>
+                <outlet property="collapsedSubView" destination="vPE-bU-byU" id="lZT-f4-SG8"/>
+                <outlet property="collapsedVideoNameLabel" destination="pWk-3Y-oPe" id="EBN-Rk-3Aj"/>
+                <outlet property="collapsedVideoPlayButton" destination="6sG-Im-5x9" id="yUd-NK-u5Z"/>
+                <outlet property="subView" destination="2bn-r0-RUJ" id="QM0-dz-2eu"/>
+                <outlet property="videoPlayerView" destination="JFW-R4-1dV" id="Wvb-pP-ktK"/>
+            </connections>
+            <point key="canvasLocation" x="599.27536231884062" y="356.91964285714283"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="play.fill" catalog="system" width="116" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
